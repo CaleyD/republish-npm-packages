@@ -1,5 +1,14 @@
 'use strict';
-var args = require('yargs').argv;
+var args = require('yargs')
+  .string('source').describe('source', 'The URL of the source registry')
+  .string('destination').describe('destination', 'The URL of the destination registry')
+  .string('package').describe('package', 'The package name to republish')
+  .string('username').describe('username', 'Authentication username for publishing to the destination registry')
+  .string('password').describe('password', 'Authentication password for publishing to the destination registry')
+  .string('email').describe('email', 'Authentication email for publishing to the destination registry')
+  .demand(['source', 'destination', 'package', 'username', 'password', 'email'])
+  .help()
+  .argv;
 var request = require('request');
 var asnc = require('async');
 var fs = require('fs');
@@ -8,6 +17,11 @@ var npm = new (require('npm-registry-client'))({});
 var source = args.source;
 var destination = args.destination;
 var packageName = args.package;
+var auth = {
+  username: args.username,
+  password: args.password,
+  email: args.email
+};
 
 var packageMetaDataUrl = source + (source[source.length-1] === '/' ? '' : '/') + packageName;
 
@@ -40,11 +54,7 @@ request(packageMetaDataUrl, function(error, response, body) {
             metadata: cleanupMetadata(versionInfo),
             access: 'public',
             body: fs.createReadStream(getTarballFileName(versionInfo.version)),
-            auth: {
-              username: args.username,
-              password: args.password,
-              email: args.email
-            }
+            auth: auth
           }, callback);
       }, function(err) {
         if(err) {
