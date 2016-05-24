@@ -1,0 +1,88 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish',
+1 verbose cli   'oper-router-0.0.0.tgz',
+1 verbose cli   '--access',
+1 verbose cli   'public' ]
+2 info using npm@3.9.2
+3 info using node@v0.10.29
+4 verbose publish [ 'oper-router-0.0.0.tgz' ]
+5 silly cache add args [ 'oper-router-0.0.0.tgz', null ]
+6 verbose cache add spec oper-router-0.0.0.tgz
+7 silly cache add parsed spec { raw: 'oper-router-0.0.0.tgz',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: 'oper-router-0.0.0.tgz',
+7 silly cache add   spec: 'C:\\Users\\cdavis\\Desktop\\node\\republish-npm-packages\\oper-router-0.0.0.tgz',
+7 silly cache add   type: 'local' }
+8 silly addLocalTarball shasum (computed) 99c108974fc60c9b718d2944797522dd6358e033
+9 verbose addTmpTarball C:\Users\cdavis\Desktop\node\republish-npm-packages\oper-router-0.0.0.tgz not in flight; adding
+10 verbose correctMkdir C:\Users\cdavis\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+11 verbose addTmpTarball validating metadata from C:\Users\cdavis\Desktop\node\republish-npm-packages\oper-router-0.0.0.tgz
+12 verbose tar unpack C:\Users\cdavis\Desktop\node\republish-npm-packages\oper-router-0.0.0.tgz
+13 verbose tar unpacking to C:\Users\cdavis\AppData\Local\Temp\npm-15392-8b14561e\unpack-a3a94700
+14 silly gentlyRm C:\Users\cdavis\AppData\Local\Temp\npm-15392-8b14561e\unpack-a3a94700 is being purged
+15 verbose gentlyRm don't care about contents; nuking C:\Users\cdavis\AppData\Local\Temp\npm-15392-8b14561e\unpack-a3a94700
+16 silly gunzTarPerm modes [ '777', '666' ]
+17 silly gunzTarPerm extractEntry package.json
+18 silly gunzTarPerm extractEntry .npmignore
+19 silly gunzTarPerm extractEntry README.md
+20 silly gunzTarPerm extractEntry index.js
+21 silly gunzTarPerm extractEntry healthcheck.html.template
+22 verbose correctMkdir C:\Users\cdavis\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+23 silly cache afterAdd oper-router@0.0.0
+24 verbose afterAdd C:\Users\cdavis\AppData\Roaming\npm-cache\oper-router\0.0.0\package\package.json not in flight; writing
+25 verbose correctMkdir C:\Users\cdavis\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+26 verbose afterAdd C:\Users\cdavis\AppData\Roaming\npm-cache\oper-router\0.0.0\package\package.json written
+27 silly publish { name: 'oper-router',
+27 silly publish   version: '0.0.0',
+27 silly publish   description: 'Express router to help operationalize a web app with utility routes defined at URLs under ~/-/.',
+27 silly publish   main: 'index.js',
+27 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+27 silly publish   publishConfig: { registry: 'http://npm.webmdhealth.net:4873/' },
+27 silly publish   repository:
+27 silly publish    { type: 'hg',
+27 silly publish      url: 'http://pdxhg.webmdhealth.net/whsnodemodules' },
+27 silly publish   peerDependencies: { express: '~4.0.0' },
+27 silly publish   readme: 'oper-router\r\n===========\r\n\r\nExpress router to help operationalize a web application with utility routes defined at URLs under ~/-/.\r\n\r\nThis is a very basic utility and not meant to replace more sophisticated monitoring tools.\r\n\r\n## HealthCheck\r\n\r\nUrl: /APP/-/healthcheck\r\n\r\nReturns basic health information, including uptime and memory usage.\r\n\r\n## Kill\r\n\r\nUrl: /APP/-/kill\r\n\r\nAllows error-handling testing by triggering a new unhandled exception.\r\n\r\n## Dump\r\n\r\nUrl: /APP/-/dump\r\n\r\nIf the `heapdump` module is installed, hitting this endpoint will create a heap dump.\r\n\r\n## Usage\r\n\r\n    var express = require(\'express\');\r\n    var app = express();\r\n    ...\r\n    app.use(\'APP\', require(\'oper-router\'));\r\n',
+27 silly publish   readmeFilename: 'README.md',
+27 silly publish   _id: 'oper-router@0.0.0',
+27 silly publish   _shasum: '99c108974fc60c9b718d2944797522dd6358e033',
+27 silly publish   _resolved: 'file:oper-router-0.0.0.tgz',
+27 silly publish   _from: 'oper-router-0.0.0.tgz' }
+28 info lifecycle oper-router@0.0.0~prepublish: oper-router@0.0.0
+29 silly lifecycle oper-router@0.0.0~prepublish: no script for prepublish, continuing
+30 verbose getPublishConfig { registry: 'http://npm.webmdhealth.net:4873/' }
+31 silly mapToRegistry name oper-router
+32 silly mapToRegistry using default registry
+33 silly mapToRegistry registry http://npm.webmdhealth.net:4873/
+34 silly mapToRegistry data { raw: 'oper-router',
+34 silly mapToRegistry   scope: null,
+34 silly mapToRegistry   name: 'oper-router',
+34 silly mapToRegistry   rawSpec: '',
+34 silly mapToRegistry   spec: 'latest',
+34 silly mapToRegistry   type: 'tag' }
+35 silly mapToRegistry uri http://npm.webmdhealth.net:4873/oper-router
+36 verbose publish registryBase http://npm.webmdhealth.net:4873/
+37 silly publish uploading C:\Users\cdavis\AppData\Roaming\npm-cache\oper-router\0.0.0\package.tgz
+38 verbose stack Error: auth required for publishing
+38 verbose stack     at CachingRegistryClient.publish (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\publish.js:30:14)
+38 verbose stack     at C:\Program Files (x86)\nodejs\node_modules\npm\lib\publish.js:137:14
+38 verbose stack     at mapToRegistry (C:\Program Files (x86)\nodejs\node_modules\npm\lib\utils\map-to-registry.js:62:3)
+38 verbose stack     at publish_ (C:\Program Files (x86)\nodejs\node_modules\npm\lib\publish.js:106:3)
+38 verbose stack     at Array.1 (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\slide\lib\bind-actor.js:15:8)
+38 verbose stack     at LOOP (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\slide\lib\chain.js:15:14)
+38 verbose stack     at C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\slide\lib\chain.js:18:7
+38 verbose stack     at done (C:\Program Files (x86)\nodejs\node_modules\npm\lib\utils\lifecycle.js:128:5)
+38 verbose stack     at LOOP (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\slide\lib\chain.js:7:26)
+38 verbose stack     at C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\slide\lib\chain.js:18:7
+39 verbose cwd C:\Users\cdavis\Desktop\node\republish-npm-packages
+40 error Windows_NT 6.1.7601
+41 error argv "C:\\Program Files (x86)\\nodejs\\\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish" "oper-router-0.0.0.tgz" "--access" "public"
+42 error node v0.10.29
+43 error npm  v3.9.2
+44 error code ENEEDAUTH
+45 error need auth auth required for publishing
+46 error need auth You need to authorize this machine using `npm adduser`
+47 verbose exit [ 1, true ]

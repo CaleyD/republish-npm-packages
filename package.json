@@ -1,0 +1,25 @@
+{
+  "name": "republish-npm-packages",
+  "version": "0.0.1",
+  "description": "Pull npm packages from one private registry and republish all of their versions to another npm registry.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaleyD/republish-npm-packages.git"
+  },
+  "author": "Caley Davis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CaleyD/republish-npm-packages/issues"
+  },
+  "homepage": "https://github.com/CaleyD/republish-npm-packages#readme",
+  "dependencies": {
+    "async": "^1.5.2",
+    "npm-registry-client": "^7.1.0",
+    "request": "^2.72.0",
+    "yargs": "^4.7.1"
+  }
+}
